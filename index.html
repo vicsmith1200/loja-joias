@@ -4,49 +4,85 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Couple Joias</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="topo">
-  <a class="logo" href="#" id="logo">Couple Joias</a>
-  <a class="btn-zap-topo" id="zapTopo" target="_blank" rel="noopener">WhatsApp</a>
+<div class="aviso" id="aviso" hidden></div>
+<header>
+  <div class="topo">
+    <label class="busca"><input type="search" id="busca" placeholder="Buscar joias…" aria-label="Buscar joias"></label>
+    <a class="logo" href="#" id="logo">Couple<small>Joias · Prata 925</small></a>
+    <div class="acoes"><a id="zapTopo" target="_blank" rel="noopener">Fale no WhatsApp</a></div>
+  </div>
+  <nav class="menu" id="menu" aria-label="Categorias"></nav>
 </header>
 
 <section class="hero">
-  <p class="hero-sub" id="slogan"></p>
-  <h1 id="heroTitulo">Joias</h1>
+  <div class="txt">
+    <small id="slogan"></small>
+    <h1 id="heroTitulo"></h1>
+    <p id="heroTexto"></p>
+    <a class="btn" href="#colecao">Ver coleção</a>
+  </div>
+  <div class="img" id="heroImg"></div>
 </section>
 
-<nav class="filtros" id="filtros" aria-label="Categorias"></nav>
+<section class="sec" id="catsSec" hidden>
+  <h2>Compre por categoria</h2>
+  <p class="sub">Encontre a joia ideal</p>
+  <div class="cats" id="cats"></div>
+</section>
 
-<main>
+<section class="sec" id="colecao">
+  <h2 id="tituloCol">Mais desejados</h2>
+  <p class="sub">Clique em uma peça para ver detalhes e pedir pelo WhatsApp</p>
   <div class="grade" id="grade"></div>
-  <p class="vazio" id="vazio" hidden>Nenhum produto nesta categoria no momento.</p>
-</main>
+  <p class="vazio" id="vazio" hidden>Nenhum produto encontrado.</p>
+</section>
+
+<section class="banner">
+  <small>Para casais</small>
+  <h2>Alianças e joias para celebrar o amor</h2>
+  <a class="btn" id="zapBanner" target="_blank" rel="noopener">Falar com a gente</a>
+</section>
+
+<section class="valores">
+  <div><b>Atendimento personalizado</b>Tire dúvidas e compre pelo WhatsApp</div>
+  <div><b>Envio para todo o Brasil</b>De Belo Horizonte para você</div>
+  <div><b>Pronto para presentear</b>Embalagem especial</div>
+  <div><b>Prata 925 legítima</b>Qualidade garantida</div>
+</section>
 
 <section class="sobre" id="sobreSec" hidden>
   <h2>Sobre nós</h2>
   <p id="sobre"></p>
 </section>
 
-<footer class="rodape"><a id="tiktok" target="_blank" rel="noopener" hidden>TikTok</a><span id="rodape"></span></footer>
+<footer>
+  <div class="fcols">
+    <div><h4 id="fNome">Couple Joias</h4><p id="fTexto"></p></div>
+    <div><h4>Loja</h4><div id="fCats"></div></div>
+    <div><h4>Contato</h4><a id="fZap" target="_blank" rel="noopener">WhatsApp</a><a id="insta" target="_blank" rel="noopener" hidden>Instagram</a><span>Belo Horizonte · MG</span></div>
+  </div>
+  <div class="copy" id="rodape"></div>
+</footer>
+
+<a class="zapfix" id="zapFix" target="_blank" rel="noopener">Fale conosco</a>
 
 <div class="modal" id="modal" hidden>
   <div class="modal-fundo" data-fechar></div>
-  <article class="modal-caixa" role="dialog" aria-modal="true">
-    <button class="modal-x" data-fechar aria-label="Fechar">×</button>
+  <article class="caixa" role="dialog" aria-modal="true">
+    <button class="x" data-fechar aria-label="Fechar">×</button>
     <div class="galeria">
       <img id="mFoto" alt="">
       <div class="miniaturas" id="mMini"></div>
     </div>
-    <div class="info">
-      <p class="cat" id="mCat"></p>
+    <div class="tx">
+      <small id="mCat"></small>
       <h2 id="mNome"></h2>
-      <p class="preco" id="mPreco"></p>
-      <p class="desc" id="mDesc"></p>
-      <a class="btn-zap" id="mZap" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+      <div class="pr" id="mPreco"></div>
+      <p id="mDesc"></p>
+      <a class="btn" id="mZap" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
     </div>
   </article>
 </div>
