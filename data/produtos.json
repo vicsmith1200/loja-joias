@@ -1,0 +1,31 @@
+{
+  "produtos": [
+    {
+      "nome": "Anel Solitário Prata 925",
+      "categoria": "Anéis",
+      "preco": 289.9,
+      "descricao": "Anel solitário em prata 925 com zircônia.\nAcompanha caixa para presente.",
+      "fotos": ["uploads/sem-foto.svg"],
+      "destaque": true,
+      "esgotado": false
+    },
+    {
+      "nome": "Colar Ponto de Luz",
+      "categoria": "Colares",
+      "preco": 199,
+      "descricao": "Corrente delicada com pingente ponto de luz em prata 925.",
+      "fotos": ["uploads/sem-foto.svg"],
+      "destaque": false,
+      "esgotado": false
+    },
+    {
+      "nome": "Brinco Argola Média",
+      "categoria": "Brincos",
+      "preco": 159.5,
+      "descricao": "Argola média em prata 925.",
+      "fotos": ["uploads/sem-foto.svg"],
+      "destaque": false,
+      "esgotado": true
+    }
+  ]
+}
