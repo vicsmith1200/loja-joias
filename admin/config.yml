@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: vicsmith1200/loja-joias
   branch: main
 
 locale: pt
