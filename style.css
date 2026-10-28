@@ -1,0 +1,50 @@
+:root{--bg:#f8f5ef;--tx:#3a3029;--mut:#7d726a;--ouro:#4a3b31;--linha:#e2dbd0;--card:#fff}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--tx);font-family:'Jost',sans-serif;font-weight:300;line-height:1.6}
+img{display:block;max-width:100%}
+.topo{display:flex;justify-content:space-between;align-items:center;padding:18px 5vw;border-bottom:1px solid var(--linha);position:sticky;top:0;background:var(--bg);z-index:5}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.7rem;letter-spacing:.08em;color:var(--tx);text-decoration:none;font-weight:500}
+.btn-zap-topo{font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ouro);text-decoration:none;border:1px solid var(--ouro);padding:8px 18px}
+.btn-zap-topo:hover{background:var(--ouro);color:#fff}
+.hero{text-align:center;padding:70px 5vw 40px}
+.hero-sub{letter-spacing:.25em;text-transform:uppercase;font-size:.8rem;color:var(--mut)}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(2.6rem,7vw,4.6rem);margin-top:8px}
+.filtros{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;padding:10px 5vw 30px}
+.filtros button{font:inherit;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;background:none;border:none;border-bottom:1px solid transparent;color:var(--mut);padding:6px 12px;cursor:pointer}
+.filtros button.ativo,.filtros button:hover{color:var(--tx);border-bottom-color:var(--ouro)}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:28px;padding:0 5vw 70px;max-width:1300px;margin:auto}
+.card{background:var(--card);cursor:pointer;position:relative;border:1px solid var(--linha);transition:box-shadow .25s}
+.card:hover{box-shadow:0 10px 30px rgba(60,40,10,.12)}
+.card .img{aspect-ratio:1/1;overflow:hidden;background:#f1ece3}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover img{transform:scale(1.05)}
+.card .txt{padding:16px;text-align:center}
+.card h3{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.3rem}
+.card .preco{color:var(--ouro);margin-top:2px}
+.selo{position:absolute;top:10px;left:10px;background:var(--tx);color:#fff;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px}
+.selo.dest{background:var(--ouro)}
+.card.esgotado img{opacity:.45}
+.vazio{text-align:center;color:var(--mut);padding:40px}
+.sobre{max-width:700px;margin:0 auto;padding:30px 5vw 70px;text-align:center}
+.sobre h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:2rem;margin-bottom:10px}
+.rodape{text-align:center;padding:26px;border-top:1px solid var(--linha);color:var(--mut);font-size:.85rem}
+.rodape a{display:block;margin-bottom:6px;color:var(--ouro);letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
+.rodape a[hidden]{display:none}
+.modal{position:fixed;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;padding:16px}
+.modal[hidden]{display:none}
+.modal-fundo{position:absolute;inset:0;background:rgba(30,22,10,.6)}
+.modal-caixa{position:relative;background:var(--bg);max-width:960px;width:100%;max-height:92vh;overflow:auto;display:grid;grid-template-columns:1.1fr 1fr}
+.modal-x{position:absolute;top:8px;right:14px;font-size:2rem;background:none;border:none;cursor:pointer;color:var(--tx);z-index:2}
+.galeria #mFoto{width:100%;aspect-ratio:1/1;object-fit:cover}
+.miniaturas{display:flex;gap:8px;padding:8px;overflow-x:auto}
+.miniaturas img{width:64px;height:64px;object-fit:cover;cursor:pointer;border:2px solid transparent;opacity:.7}
+.miniaturas img.ativa{border-color:var(--ouro);opacity:1}
+.info{padding:40px 32px;display:flex;flex-direction:column;gap:10px}
+.info .cat{letter-spacing:.2em;text-transform:uppercase;font-size:.75rem;color:var(--mut)}
+.info h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:2.1rem;line-height:1.15}
+.info .preco{font-size:1.4rem;color:var(--ouro)}
+.info .desc{white-space:pre-line}
+.btn-zap{margin-top:auto;text-align:center;background:var(--tx);color:#fff;padding:14px;text-decoration:none;letter-spacing:.12em;text-transform:uppercase;font-size:.85rem}
+.btn-zap:hover{background:var(--ouro)}
+.btn-zap.off{background:#bbb;pointer-events:none}
+@media(max-width:700px){.modal-caixa{grid-template-columns:1fr}.info{padding:24px}.grade{grid-template-columns:repeat(2,1fr);gap:14px}.card h3{font-size:1.05rem}}

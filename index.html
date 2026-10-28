@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Couple Joias</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topo">
+  <a class="logo" href="#" id="logo">Couple Joias</a>
+  <a class="btn-zap-topo" id="zapTopo" target="_blank" rel="noopener">WhatsApp</a>
+</header>
+
+<section class="hero">
+  <p class="hero-sub" id="slogan"></p>
+  <h1 id="heroTitulo">Joias</h1>
+</section>
+
+<nav class="filtros" id="filtros" aria-label="Categorias"></nav>
+
+<main>
+  <div class="grade" id="grade"></div>
+  <p class="vazio" id="vazio" hidden>Nenhum produto nesta categoria no momento.</p>
+</main>
+
+<section class="sobre" id="sobreSec" hidden>
+  <h2>Sobre nós</h2>
+  <p id="sobre"></p>
+</section>
+
+<footer class="rodape"><a id="tiktok" target="_blank" rel="noopener" hidden>TikTok</a><span id="rodape"></span></footer>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal-fundo" data-fechar></div>
+  <article class="modal-caixa" role="dialog" aria-modal="true">
+    <button class="modal-x" data-fechar aria-label="Fechar">×</button>
+    <div class="galeria">
+      <img id="mFoto" alt="">
+      <div class="miniaturas" id="mMini"></div>
+    </div>
+    <div class="info">
+      <p class="cat" id="mCat"></p>
+      <h2 id="mNome"></h2>
+      <p class="preco" id="mPreco"></p>
+      <p class="desc" id="mDesc"></p>
+      <a class="btn-zap" id="mZap" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+    </div>
+  </article>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
